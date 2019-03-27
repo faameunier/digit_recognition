@@ -366,11 +366,11 @@ class DetectionDataset:
                     json.dump(result, f)
         except:
             pass
-        try:
-            with open("out.pickle", "w") as f:
-                json.dump(results, f)
-        except:
-            pass
+        for k in range(len(results)):
+            results[k]["image_id"] = ids[ids["ids"] == results[k]["image_id"]].iloc[0]["image_path"]
+            results[k]["category"] = self.class_names[int(results[k]["category_id"])]
+        with open("out.pickle", "wb") as f:
+            pickle.dump(results, f)
         return result
 
     # code for singleton:
