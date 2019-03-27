@@ -1,7 +1,7 @@
 <annotation>
 	<folder>HQ_digital</folder>
 	<filename>1046212bf9fd73fcd343e2f80886e92ebe4f7673.jpg</filename>
-	<path>Datasets/img/1046212bf9fd73fcd343e2f80886e92ebe4f7673.jpg</path>
+	<path>/Users/vince/Desktop/ESSEC/Master DSBA/T1/Hackathon/Datasets/HQ_digital/1046212bf9fd73fcd343e2f80886e92ebe4f7673.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>871</xmin>
-			<ymin>734</ymin>
-			<xmax>1043</xmax>
-			<ymax>944</ymax>
+			<xmin>877</xmin>
+			<ymin>725</ymin>
+			<xmax>1055</xmax>
+			<ymax>945</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -29,10 +29,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1058</xmin>
-			<ymin>717</ymin>
-			<xmax>1201</xmax>
-			<ymax>944</ymax>
+			<xmin>1071</xmin>
+			<ymin>724</ymin>
+			<xmax>1200</xmax>
+			<ymax>946</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -41,10 +41,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1181</xmin>
-			<ymin>888</ymin>
-			<xmax>1239</xmax>
-			<ymax>931</ymax>
+			<xmin>1192</xmin>
+			<ymin>880</ymin>
+			<xmax>1232</xmax>
+			<ymax>933</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -54,9 +54,9 @@
 		<difficult>0</difficult>
 		<bndbox>
 			<xmin>1242</xmin>
-			<ymin>711</ymin>
-			<xmax>1371</xmax>
-			<ymax>932</ymax>
+			<ymin>707</ymin>
+			<xmax>1374</xmax>
+			<ymax>945</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -65,10 +65,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1397</xmin>
-			<ymin>702</ymin>
-			<xmax>1559</xmax>
-			<ymax>927</ymax>
+			<xmin>1403</xmin>
+			<ymin>703</ymin>
+			<xmax>1540</xmax>
+			<ymax>932</ymax>
 		</bndbox>
 	</object>
 </annotation>
