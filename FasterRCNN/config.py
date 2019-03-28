@@ -77,15 +77,15 @@ _C = config     # short alias to avoid coding
 # mode flags ---------------------
 _C.TRAINER = 'replicated'  # options: 'horovod', 'replicated'
 _C.MODE_MASK = False        # FasterRCNN or MaskRCNN
-_C.MODE_FPN = False
+_C.MODE_FPN = True
 
 # dataset -----------------------
 _C.DATA.BASEDIR = 'Datasets/'
 _C.DATA.DATAFRAME = 'data/frcnn_df.h5'
 # All TRAIN dataset will be concatenated for training.
-_C.DATA.TRAIN = ('test',)   # i.e. trainval35k, AKA train2017
+_C.DATA.TRAIN = ('test','val')   # i.e. trainval35k, AKA train2017
 # Each VAL dataset will be evaluated separately (instead of concatenated)
-_C.DATA.VAL = ('val',)  # AKA val2017
+_C.DATA.VAL = ('test',)  # AKA val2017
 _C.DATA.TEST = ('test',)  # AKA val2017
 # This two config will be populated later by the dataset loader:
 _C.DATA.NUM_CATEGORY = 0  # without the background class (e.g., 80 for COCO)
@@ -126,8 +126,8 @@ _C.TRAIN.STARTING_EPOCH = 1  # the first epoch to start with, useful to continue
 # Therefore, there is *no need* to modify the config if you only change the number of GPUs.
 
 # _C.TRAIN.LR_SCHEDULE = [120000, 160000, 180000]      # "1x" schedule in detectron
-_C.TRAIN.LR_SCHEDULE = [150000, 230000, 280000]  # custom
-# _C.TRAIN.LR_SCHEDULE = [240000, 320000, 360000]      # "2x" schedule in detectron
+# _C.TRAIN.LR_SCHEDULE = [150000, 230000, 280000]  # custom
+_C.TRAIN.LR_SCHEDULE = [240000, 320000, 360000]      # "2x" schedule in detectron
 # Longer schedules for from-scratch training (https://arxiv.org/abs/1811.08883):
 # _C.TRAIN.LR_SCHEDULE = [960000, 1040000, 1080000]    # "6x" schedule in detectron
 # _C.TRAIN.LR_SCHEDULE = [1500000, 1580000, 1620000]   # "9x" schedule in detectron
@@ -173,7 +173,7 @@ _C.RPN.TRAIN_PER_LEVEL_NMS_TOPK = 2000
 _C.RPN.TEST_PER_LEVEL_NMS_TOPK = 1000
 
 # fastrcnn training ---------------------
-_C.FRCNN.BATCH_PER_IM = 256
+_C.FRCNN.BATCH_PER_IM = 512
 _C.FRCNN.BBOX_REG_WEIGHTS = [10., 10., 5., 5.]  # Better but non-standard setting: [20, 20, 10, 10]
 _C.FRCNN.FG_THRESH = 0.5
 _C.FRCNN.FG_RATIO = 0.25  # fg ratio in a ROI batch
