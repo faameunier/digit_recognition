@@ -178,14 +178,14 @@ def objects_to_OBF(objects_df, output_folder, item_db_path):
 
 def objects_to_FRCNN(objects_df, df_path, test_size=0.2, val_size=0.2):
     temp = objects_df[["image_path", "xmin", "ymin", "xmax", "ymax", "category"]]
-    ids = list(temp.index)
+    ids = temp["image_path"].unique()
     train, test = train_test_split(ids, test_size=test_size)
     train, val = train_test_split(train, test_size=val_size)
     types = pd.DataFrame({'type': [None]})
     temp = temp.join(types)
-    temp.loc[train, "type"] = "train"
-    temp.loc[test, "type"] = "test"
-    temp.loc[val, "type"] = "val"
+    temp.loc[temp["image_path"].isin(train), "type"] = "train"
+    temp.loc[temp["image_path"].isin(test), "type"] = "test"
+    temp.loc[temp["image_path"].isin(val), "type"] = "val"
     temp.to_hdf(df_path, key="df")
     return temp
 

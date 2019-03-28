@@ -320,7 +320,7 @@ class ResNetFPNModel(DetectionModel):
             return []
 
 
-def do_visualize(model, model_path, nr_visualize=100, output_dir='models/frcnn/output_test'):
+def do_visualize(model, model_path, nr_visualize=300, output_dir='models/frcnn/output_test'):
     """
     Visualize some intermediate results (proposals, raw predictions) inside the pipeline.
     """
