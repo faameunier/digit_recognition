@@ -83,7 +83,7 @@ _C.MODE_FPN = True
 _C.DATA.BASEDIR = 'Datasets/'
 _C.DATA.DATAFRAME = 'data/frcnn_df.h5'
 # All TRAIN dataset will be concatenated for training.
-_C.DATA.TRAIN = ('test','val')   # i.e. trainval35k, AKA train2017
+_C.DATA.TRAIN = ('train','val')   # i.e. trainval35k, AKA train2017
 # Each VAL dataset will be evaluated separately (instead of concatenated)
 _C.DATA.VAL = ('test',)  # AKA val2017
 _C.DATA.TEST = ('test',)  # AKA val2017

@@ -257,7 +257,7 @@ class DetectionDataset:
 
             roidbs.append(temp)
 
-        self.df[self.df["type"] == names[0]].groupby("image_path").apply(build_roidbs)
+        self.df[self.df["type"].isin(names)].groupby("image_path").apply(build_roidbs)
         # print(roidbs)
         return roidbs
 
