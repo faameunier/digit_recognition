@@ -1,2 +1,4 @@
 models/frcnn/*.data*
 models/frcnn/*.index
+.venv/
+__pycache__/
