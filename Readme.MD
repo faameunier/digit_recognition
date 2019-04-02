@@ -35,8 +35,9 @@ The output of the test set is saved in **out.pickle**.
 On the given examples, training took about 30 minutes on one Tesla V100. (Training was stopped early).
 # Examples
 Here are 2 pictures randomly selected on google to prove the efficiency of this method:
-![First example](https://github.com/faameunier/digit_recognition/img/google_random_test.png)
-![Second example](https://github.com/faameunier/digit_recognition/img/google_random_test_2.png)
+![First example](https://github.com/faameunier/digit_recognition/blob/master/img/google_random_test.png)
+
+![Second example](https://github.com/faameunier/digit_recognition/blob/master/img/google_random_test_2.png)
 
 
 
